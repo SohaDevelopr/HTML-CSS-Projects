@@ -17,7 +17,7 @@
 }
 
 body {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 /* Start Banner */
@@ -25,8 +25,8 @@ body {
 .banner {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(images/img-1.avif);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/banner-img-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -307,11 +307,14 @@ body {
 }
 
 .section-text a {
+  display: block;
   color: var(--main-color);
   font-weight: 600;
   cursor: pointer;
   padding-bottom: 3px;
   border-bottom: 2px solid var(--main-color);
+  width: fit-content;
+  margin: 5px auto 0;
 }
 
 .section-text a:hover {
@@ -359,7 +362,7 @@ body {
   }
 
   .section-text {
-    width: 100%;
+    flex-basis: 100%;
     order: 1;
     padding: 19px;
   }
@@ -396,7 +399,8 @@ body {
 .two {
   height: 80vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(images/image.jpeg);
+    url(../images/banner-img-2.jpg);
+  background-position: center left;
 }
 
 .two .content .title {
@@ -570,28 +574,30 @@ body {
   background-color: var(--fourth-color);
   height: 560px;
   padding: 40px 0;
+  color: var(--third-color);
 }
 
 .reservation .section-body {
+  width: 85%;
   justify-content: space-between;
   height: 100%;
 }
 
 .reservation .section-body .section-img {
-  width: 45%;
+  flex-basis: 50%;
+}
+
+.reservation .section-body .section-img img {
+  max-width: 100%;
   height: auto;
+}
+
+.reservation .section-body .section-text {
+  flex-basis: 47%;
 }
 
 .reservation .section-body .section-text .title {
   margin-bottom: 15px;
-}
-
-.reservation .section-body .section-text .title h2 {
-  color: var(--third-color);
-}
-
-.reservation .section-body .section-text p:not(.title p) {
-  color: var(--third-color);
 }
 
 /* Media Query */
@@ -606,25 +612,37 @@ body {
 
 @media (max-width: 770px) {
   .reservation {
+    font-size: 12px;
     height: auto;
     padding: 40px 20px;
   }
   .reservation .section-body .section-img {
-    width: 100%;
+    flex-basis: 100%;
   }
 
   .reservation .section-body .section-text {
     padding: 0;
   }
-
-  .reservation .section-body .section-text p:not(.title p) {
-    font-size: 12px;
-  }
 }
 
 /* Medium And Larger */
 
-@media (min-width: 770px) and (max-width: 1200px) {
+@media (min-width: 770px) and (max-width: 1025px) {
+  .reservation {
+    padding: 20px;
+    height: 500px;
+  }
+
+  .reservation .section-body {
+    width: 90%;
+  }
+
+  .reservation .section-body .section-text {
+    flex-basis: 44%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
   .reservation {
     padding: 24px;
     height: 400px;
@@ -729,18 +747,15 @@ body {
 /* Start Section Chefs  */
 
 .chefs {
+  text-align: center;
+  font-size: 16px;
+  color: var(--third-color);
   background-color: var(--fourth-color);
   padding: 50px 0;
 }
 
 .chefs .title {
   margin-bottom: 30px;
-  color: var(--third-color);
-}
-
-.chefs p:not(.title p, .box .box-txt p) {
-  text-align: center;
-  font-size: 16px;
   color: var(--third-color);
 }
 
@@ -789,14 +804,14 @@ body {
 
 /* Start Section Callery */
 
+.callery {
+  text-align: center;
+  font-size: 16px;
+}
+
 .callery .title {
   height: 100%;
   margin-bottom: 30px;
-}
-
-.callery p:not(.title p, .box .box-txt p) {
-  text-align: center;
-  font-size: 16px;
 }
 
 .photo-box {
