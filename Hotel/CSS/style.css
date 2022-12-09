@@ -742,6 +742,7 @@ nav {
 
     .card img {
         order: 1;
+        max-height: 100%;
     }
 
     .card-text h3 {
@@ -844,6 +845,12 @@ form .txt_field {
     outline: none;
 }
 
+.button input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .txt_field label {
     position: absolute;
     top: 50%;
@@ -944,6 +951,10 @@ form .txt_field {
 
     .box-img {
         width: 100%;
+    }
+
+    .button input {
+        height: 50px;
     }
 
 }
