@@ -1,0 +1,538 @@
+/* Start Global Rules */
+/* Google Fonts Libary */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Marhey:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Cairo", sans-serif;
+}
+
+:root {
+  --main-color: #db7093;
+  --second-main-color: #000;
+  --margin-bottom: 80px;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/* Framework Class */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End Global Rules */
+
+/* Start Header */
+header {
+  width: 100%;
+  height: 70px;
+  padding: 10px 30px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between !important;
+}
+
+.menu {
+  display: none;
+}
+
+.menu i {
+  cursor: pointer;
+}
+
+.right {
+  align-self: flex-start;
+}
+
+.right h1 {
+  font-family: "Marhey", cursive;
+  font-weight: 400;
+  color: var(--main-color);
+  margin-bottom: -14px;
+}
+
+.right span {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--second-main-color);
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+a {
+  color: var(--second-main-color);
+}
+
+.left i {
+  margin: 0 5px;
+}
+
+/* Media Query */
+
+@media (max-width: 767px) {
+  header {
+    padding: 12px 10px;
+  }
+
+  nav:hover .center {
+    display: block;
+  }
+
+  .menu {
+    display: block;
+    width: 18%;
+  }
+
+  .right {
+    align-self: center;
+  }
+
+  .center {
+    display: none;
+    width: 150px;
+    background-color: var(--main-color);
+    position: absolute;
+    right: 34px;
+    top: 60px;
+    text-align: center;
+  }
+
+  .center ul {
+    position: relative;
+  }
+
+  .center ul::after {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--main-color) transparent;
+    position: absolute;
+    right: 0px;
+    top: -31px;
+  }
+
+  .center ul li {
+    display: block;
+    margin: 12px;
+  }
+
+  .center a {
+    color: #ffffff;
+  }
+
+  .left .material-icons-outlined {
+    font-size: 20px;
+  }
+}
+
+/* End Header */
+
+/* Srart Banner */
+
+.banner {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: url(../images/banner-image.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: var(--margin-bottom);
+  justify-content: flex-end;
+}
+
+/* Start Framework Class */
+
+.contect {
+  width: 90%;
+  height: 40%;
+  text-align: right;
+  margin: auto;
+}
+
+.contect h1 {
+  color: var(--main-color);
+  margin-bottom: 8px;
+  text-align: right;
+  font-size: 2.2em;
+}
+
+.contect p {
+  font-weight: 600;
+  color: var(--second-main-color);
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.contect button {
+  padding: 7px 30px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  background-color: var(--main-color);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* End Framework Class */
+
+/* Media Query */
+
+@media (max-width: 358px) {
+  .banner {
+    background-position: 67% 75%;
+  }
+
+  .banner .contect h1 {
+    font-size: 2em;
+  }
+
+  .contect {
+    height: 50%;
+  }
+
+  .contect p {
+    width: 95%;
+  }
+}
+
+@media (min-width: 358px) and (max-width: 768px) {
+  .banner {
+    background-position: 75% 75%;
+  }
+
+  .contect {
+    height: 50%;
+  }
+}
+
+/* End Banner */
+
+/* Start About Us */
+.about-us {
+  width: 100%;
+  height: 80vmin;
+  margin-bottom: var(--margin-bottom);
+  justify-content: flex-end;
+  padding: 15px 0;
+}
+
+.about-us .contect {
+  width: 85%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.about-us .contect-text {
+  flex-basis: 50%;
+}
+
+.special-head {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 12px;
+}
+
+.special-head h3 {
+  margin: 0 2px -12px;
+}
+
+.special-head h3 a {
+  color: var(--main-color);
+}
+
+.special-head h1 {
+  color: var(--second-main-color);
+}
+
+.contect-text .special-head {
+  margin-right: 0;
+}
+
+.contect-text .special-head h3 {
+  text-align: right;
+}
+
+.contect-text p {
+  width: 100%;
+  word-spacing: 2px;
+}
+
+.about-us .box-img {
+  flex-basis: 45%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.box-img img {
+  max-width: 100%;
+  max-height: 95%;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Media Query */
+
+@media (max-width: 767px) {
+  .about-us {
+    height: 100%;
+  }
+
+  .special-head h1 {
+    font-size: 28px;
+  }
+
+  .about-us .contect {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .about-us .contect-text {
+    flex-basis: 100%;
+    margin-bottom: 40px;
+  }
+
+  .contect-text p {
+    width: 100%;
+  }
+
+  .about-us .box-img {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .about-us .contect {
+    width: 95%;
+  }
+}
+
+/* End About Us */
+
+/* Start Our Products */
+.our-products {
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--margin-bottom);
+  justify-content: flex-end;
+  padding: 15px 0;
+}
+
+.menus {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navbar {
+  width: fit-content;
+  margin: 0 auto 30px;
+}
+
+.navbar li {
+  font-weight: 600;
+  margin: 0 -1.8px;
+  padding: 0 15px 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.navbar .active-li,
+.navbar li:hover  {
+  color: var(--main-color);
+  border-bottom-color: var(--main-color);
+}
+
+.contect-menu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 30px;  
+  margin-top: 15px;
+}
+
+.box {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.box img {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.box img:hover {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+}
+
+.box .info {
+  text-align: center;
+}
+
+.box .info p {
+  font-size: 15px;
+  direction: rtl;
+}
+
+.box .foot {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px auto 0;
+  direction: rtl;
+}
+
+.box .foot span {
+  font-weight: 700;
+}
+
+.box .foot button {
+  padding: 5px 12px;
+  font-weight: 600;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: #ffffff;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.foot button:hover {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.423);
+}
+
+
+
+/* Media Query */
+
+@media (max-width: 767px) {
+  .menus {
+    width: 95%;
+  }
+
+  .navbar li {
+    padding: 0 8px 5px;
+    font-size: 14px;
+  }
+
+  .contect-menu {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* End Our Products */
+
+/* Start Reviews */
+.reviews {
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--margin-bottom);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.contect-review {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 15px auto 0;
+}
+
+.box-review {
+  flex-basis: 45%;
+  margin-bottom: 30px;
+}
+
+.box-review img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 8px solid #ffffff;
+  margin-bottom: -50px;
+}
+
+.box-review .box-text {
+  background-color: #f5f5f5;
+  padding: 50px 25px 40px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.box-text .start {
+  margin-top: 15px;
+}
+
+.box-text .start i {
+  margin-right: 5px;
+  color: #fbc02d;
+}
+
+.box-text .start i:last-of-type{
+  margin-right: 0;
+}
+
+  @media (max-width: 767px) {
+    .box-review {
+      flex-basis: 100%;
+    }
+  }
+
+@media (min-width: 767px) and (max-width: 900px) {
+  .contect-review {
+    width: 90%;  
+  }
+}
+
+
+/* End Reviews */
+
