@@ -59,7 +59,7 @@ nav {
   align-self: flex-start;
 }
 
-.right h1 {
+.logo {
   font-family: "Marhey", cursive;
   font-weight: 400;
   color: var(--main-color);
@@ -75,6 +75,10 @@ nav {
 ul li {
   display: inline-block;
   margin: 0 12px;
+}
+
+ul li:hover a {
+  color: var(--main-color);
 }
 
 a {
@@ -110,7 +114,7 @@ a {
     width: 150px;
     background-color: var(--main-color);
     position: absolute;
-    right: 34px;
+    right: 13px;
     top: 60px;
     text-align: center;
   }
@@ -126,16 +130,27 @@ a {
     border-color: transparent transparent var(--main-color) transparent;
     position: absolute;
     right: 0px;
-    top: -31px;
+    top: -28px;
   }
 
   .center ul li {
     display: block;
-    margin: 12px;
+    margin: 8px;
+    padding: 5px 10px;
   }
 
   .center a {
     color: #ffffff;
+  }
+
+  .center ul li:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
   }
 
   .left .material-icons-outlined {
@@ -146,7 +161,6 @@ a {
 /* End Header */
 
 /* Srart Banner */
-
 .banner {
   width: 100%;
   height: calc(100vh - 70px);
@@ -158,7 +172,6 @@ a {
 }
 
 /* Start Framework Class */
-
 .contect {
   width: 90%;
   height: 40%;
@@ -195,7 +208,6 @@ a {
 /* End Framework Class */
 
 /* Media Query */
-
 @media (max-width: 358px) {
   .banner {
     background-position: 67% 75%;
@@ -294,7 +306,6 @@ a {
 }
 
 /* Media Query */
-
 @media (max-width: 767px) {
   .about-us {
     height: 100%;
@@ -360,7 +371,7 @@ a {
 }
 
 .navbar .active-li,
-.navbar li:hover  {
+.navbar li:hover {
   color: var(--main-color);
   border-bottom-color: var(--main-color);
 }
@@ -369,16 +380,16 @@ a {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 30px;  
+  gap: 30px;
   margin-top: 15px;
 }
 
 .box {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .box img {
@@ -394,11 +405,13 @@ a {
 }
 
 .box img:hover {
+  filter: opacity(65%);
   transform: scale(1.01);
   -webkit-transform: scale(1.01);
   -moz-transform: scale(1.01);
   -ms-transform: scale(1.01);
   -o-transform: scale(1.01);
+  -webkit-filter: opacity(65%);
 }
 
 .box .info {
@@ -440,8 +453,6 @@ a {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.423);
 }
 
-
-
 /* Media Query */
 
 @media (max-width: 767px) {
@@ -455,34 +466,38 @@ a {
   }
 
   .contect-menu {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
-
 }
 
 /* End Our Products */
 
 /* Start Reviews */
 .reviews {
-    width: 100%;
-    height: auto;
-    margin-bottom: var(--margin-bottom);
-    padding: 15px 0;
-    text-align: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--margin-bottom);
+  padding: 15px 0;
+  text-align: center;
 }
 
 .contect-review {
-  width: 75%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 15px auto 0;
+  margin: 15px auto;
 }
 
 .box-review {
   flex-basis: 45%;
   margin-bottom: 30px;
+}
+
+.box-review:hover img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 
 .box-review img {
@@ -500,7 +515,7 @@ a {
 
 .box-review .box-text {
   background-color: #f5f5f5;
-  padding: 50px 25px 40px;
+  padding: 50px 25px 45px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -517,22 +532,149 @@ a {
   color: #fbc02d;
 }
 
-.box-text .start i:last-of-type{
+.box-text .start i:last-of-type {
   margin-right: 0;
 }
 
-  @media (max-width: 767px) {
-    .box-review {
-      flex-basis: 100%;
-    }
-  }
+.btn-arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  color: #ffffff;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
 
-@media (min-width: 767px) and (max-width: 900px) {
-  .contect-review {
-    width: 90%;  
+.btn-arrows button:last-of-type {
+  margin-right: 20px;
+}
+
+.btn-arrows button i {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .box-review {
+    flex-basis: 100%;
   }
 }
 
+@media (min-width: 768px) and (max-width: 900px) {
+  .contect-review {
+    width: 80%;
+  }
+}
 
 /* End Reviews */
 
+/* Start Contact Us */
+.contact-us {
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--margin-bottom);
+  padding: 15px 0;
+}
+
+.contect-contact {
+  width: 70%;
+  margin: 45px auto 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.box-contact {
+  flex-basis: 30%;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+}
+
+.box-contact i {
+  font-size: 30px;
+  margin-left: 20px;
+  color: var(--main-color);
+}
+
+.box-contact h5 {
+  font-size: 18px;
+  color: var(--second-main-color);
+}
+
+.box-contact p {
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .box-contact {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 900px) {
+  .contect-contact {
+    width: 80%;
+  }
+}
+
+/* End Contact Us */
+
+/* Start Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 25px;
+}
+
+footer .logo {
+  font-size: 45px;
+  margin-bottom: 0;
+}
+
+.social {
+  margin: 20px 0;
+}
+
+.social i {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.social i:hover {
+  background-color: var(--main-color);
+  color: #ffffff;
+}
+
+.social i:not(:first-of-type) {
+  margin-left: 18px;
+}
+
+hr {
+  width: 80%;
+  height: 1.5px;
+  margin: 25px auto;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+}
+
+.end-line {
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+/* End Footer */
