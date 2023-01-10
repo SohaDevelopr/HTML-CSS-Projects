@@ -26,7 +26,7 @@ button {
 }
 
 /* Framework Class */
-.flex-center {
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -483,9 +483,7 @@ a {
 
 .contect-review {
   width: 80%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
   margin: 15px auto;
 }
